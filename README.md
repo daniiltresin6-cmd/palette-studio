@@ -1,17 +1,22 @@
-# palette_app
+## Palette Studio (Flutter)
 
-A new Flutter project.
+**Статус:** Завершён, готов к публикации  
+**Объём:** ~2000 строк кода  
+**Стек:** Flutter, Dart, Provider, CustomPainter, Method Channels, SharedPreferences, sensors_plus
 
-## Getting Started
+### Что делает:
+- Профессиональный инструмент для создания цветовых палитр
+- Кастомная отрисовка цветового круга и 2D-палитры (HSV/HSL)
+- 6 алгоритмов гармонии: монохром, контраст, триада, тетрада, аналогия, акцент
+- Система оттенков (shades) для каждого цвета палитры
+- Экспорт в HEX / CSS-переменные / JSON
+- Сохранение палитры как PNG через нативный Method Channel (Android)
+- Встроенный модуль трекинга состояния с аварийным выходом по акселерометру
+- Адаптивная тема (светлая / тёмная / системная)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Ключевые технические решения:
+- Кастомные `CustomPainter` для колеса, 2D-палитры и иконок пресетов
+- Математика цветовых пространств (HSL ↔ HSV ↔ RGB)
+- Нативная интеграция через `MethodChannel` для сохранения файлов
+- Архитектура на `ChangeNotifierProvider`
+- Скрытый функционал с триггером по паттерну нажатий
