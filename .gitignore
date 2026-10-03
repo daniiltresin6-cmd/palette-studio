@@ -46,3 +46,12 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Secrets — не коммитить никогда
+.env
+.env.*
+key.properties
+*.jks
+*.keystore
+serviceAccountKey.json
+android/build/
